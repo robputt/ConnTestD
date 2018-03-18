@@ -20,7 +20,7 @@ setup(
     zip_safe=False,
 
     entry_points = {'console_scripts': [
-        'command-name = conntestd.app:main',],},
+        'conntestd = conntestd.app:main',],},
 
     package_data={'/conntestd/templates':['*'],
                   '/conntestd/static/js':['*'],
