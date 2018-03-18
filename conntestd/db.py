@@ -26,3 +26,16 @@ def get_db_session(conn_str, debug=False):
 
 def init_db(conn_str):
     BASE.metadata.create_all(get_db_engine(conn_str, False))
+
+
+class speed_test_result(BASE):
+    __tablename__ = 'speed_test_results'
+    test_id = Column(BIGINT(), primary_key=True)
+    dt = Column(DateTime, nullable=False)
+    status = Column(String(30), nullable=False)
+    downlaod = Column(Integer)
+    upload = Column(Integer)
+    ping = Column(Integer)
+    country = Column(String(50))
+    town = Column(String(50))
+    sponsor = Column(String(50))
