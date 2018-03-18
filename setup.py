@@ -19,7 +19,9 @@ setup(
     long_description="",
     zip_safe=False,
 
-    package_data={'/conntestd/templates':['*'],'/conntestd/static':['*'],},
+    package_data={'/conntestd/templates':['*'],
+                  '/conntestd/static/js':['*'],
+                  '/conntestd/static/css':['*'],},
 
     # Adds dependencies
     install_requires = ['flask',
