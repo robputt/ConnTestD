@@ -53,4 +53,5 @@ if __name__ == "__main__":
     scheduler = APScheduler()
     scheduler.init_app(app)
     scheduler.start()
+    run_speedtest()
     app.run('0.0.0.0', threaded=True)

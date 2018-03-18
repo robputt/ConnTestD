@@ -12,7 +12,6 @@
     <main role="main" class="container">
       <br/><br/><br/><br/>
       <div>
-        <h1>Connection Stats</h1>
         <h3>Recent Connection Tests</h3>
         <p>
         	<table class='table'>
@@ -21,8 +20,8 @@
         				<th>Date/Time</th>
         				<th>Status</th>
         				<th>Ping (ms)</th>
-        				<th>Download (Mbit)</th>
-        				<th>Upload (Mbit)</th>
+        				<th>Download (Mbit/s)</th>
+        				<th>Upload (Mbit/s)</th>
         				<th>Test Location</th>
         				<th>Test Sponsor</th>
         			</tr>
@@ -50,6 +49,12 @@
         		</tbody>
         	</table>
         </p>
+        <br/>
+        <h3>Last 7 Days</h3>
+        <div class='row'>
+        	<div class='col-md-6'><img src="{{ speed_graph|safe }}" /></div>
+        	<div class='col-md-6'><img src="{{ ping_graph|safe }}" /></div>
+        </div>
       </div>
     </main>
   </body>
