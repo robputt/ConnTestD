@@ -15,7 +15,9 @@ views_bp = Blueprint('conntestd_views', __name__)
 def seven_day_speed_graph():
     line_chart = pygal.Line(x_label_rotation=20,
                             legend_at_bottom=True,
-                            style=CleanStyle)
+                            style=CleanStyle,
+                            x_labels_major_every=100,
+                            show_minor_x_labels=False)
     line_chart.title = 'Download / Upload Speeds'
 
     now = datetime.datetime.now()
@@ -42,7 +44,9 @@ def seven_day_speed_graph():
 def seven_day_ping_graph():
     line_chart = pygal.Line(x_label_rotation=20,
                             legend_at_bottom=True,
-                            style=CleanStyle)
+                            style=CleanStyle,
+                            x_labels_major_every=100,
+                            show_minor_x_labels=False)
     line_chart.title = 'Ping'
 
     now = datetime.datetime.now()
