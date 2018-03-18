@@ -36,7 +36,7 @@ app.register_blueprint(views_bp)
 
 @app.before_request
 def pre_request():
-    g.db = get_db_session(DB_CONN, True)
+    g.db = get_db_session(DB_CONN)
 
 
 @app.after_request
@@ -53,4 +53,4 @@ if __name__ == "__main__":
     scheduler = APScheduler()
     scheduler.init_app(app)
     scheduler.start()
-    app.run('0.0.0.0', threaded=True, debug=False)
+    app.run('0.0.0.0', threaded=True)

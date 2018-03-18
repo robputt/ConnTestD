@@ -13,7 +13,43 @@
       <br/><br/><br/><br/>
       <div>
         <h1>Connection Stats</h1>
-        <p class="lead">Here there be graphs :-P</p>
+        <h3>Recent Connection Tests</h3>
+        <p>
+        	<table class='table'>
+        		<thead>
+        			<tr>
+        				<th>Date/Time</th>
+        				<th>Status</th>
+        				<th>Ping (ms)</th>
+        				<th>Download (Mbit)</th>
+        				<th>Upload (Mbit)</th>
+        				<th>Test Location</th>
+        				<th>Test Sponsor</th>
+        			</tr>
+        		</thead>
+        		<tbody>
+        			{% for test in recent_tests %}
+        				{% if test.status == 'complete' %}
+        					<tr class='bg-success'>
+        				{% elif test.status == 'running' %}
+        					<tr class='bg-warning'>
+        				{% elif test.status == 'error' %}
+        					<tr class='bg-danger'>
+        				{% else %}
+        					<tr>
+        				{% endif %}
+        					<td>{{ test.dt.strftime('%d/%m/%Y %H:%M') }}</td>
+        					<td>{{ test.status }}</td>
+        					<td>{{ test.ping|round(2, 'floor') }}</td>
+        					<td>{{ (test.download /1024 /1024)|round(2, 'floor') }}</td>
+        					<td>{{ (test.upload /1024 / 1024)|round(2, 'floor') }}</td>
+        					<td>{{ test.town }} ({{ test.country }})</td>
+        					<td>{{ test.sponsor }}</td>
+        				</tr>
+        			{% endfor %}
+        		</tbody>
+        	</table>
+        </p>
       </div>
     </main>
   </body>
