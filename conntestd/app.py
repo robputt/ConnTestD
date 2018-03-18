@@ -49,10 +49,14 @@ def post_request(resp):
     return resp
 
 
-if __name__ == "__main__":
+def main():
     init_db(DB_CONN)
     scheduler = APScheduler()
     scheduler.init_app(app)
     scheduler.start()
     run_speedtest()
     app.run('0.0.0.0', threaded=True)
+
+
+if __name__ == "__main__":
+    main()

@@ -19,6 +19,9 @@ setup(
     long_description="",
     zip_safe=False,
 
+    entry_points = {'console_scripts': [
+        'command-name = conntestd.app:main',],},
+
     package_data={'/conntestd/templates':['*'],
                   '/conntestd/static/js':['*'],
                   '/conntestd/static/css':['*'],},
