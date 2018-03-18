@@ -40,11 +40,11 @@
         				{% endif %}
         					<td>{{ test.dt.strftime('%d/%m/%Y %H:%M') }}</td>
         					<td>{{ test.status }}</td>
-        					<td>{{ test.ping|round(2, 'floor') }}</td>
-        					<td>{{ (test.download /1024 /1024)|round(2, 'floor') }}</td>
-        					<td>{{ (test.upload /1024 / 1024)|round(2, 'floor') }}</td>
-        					<td>{{ test.town }} ({{ test.country }})</td>
-        					<td>{{ test.sponsor }}</td>
+        					<td>{% if test.ping %}{{ test.ping|round(2, 'floor') }}{% endif %}</td>
+        					<td>{% if test.download %}{{ (test.download /1024 /1024)|round(2, 'floor') }}{% endif %}</td>
+        					<td>{% if test.upload %}{{ (test.upload /1024 / 1024)|round(2, 'floor') }}{% endif %}</td>
+        					<td>{% if test.town %}{{ test.town }} ({{ test.country }}){% endif %}</td>
+        					<td>{% if test.sponsor %}{{ test.sponsor }}{% endif %}</td>
         				</tr>
         			{% endfor %}
         		</tbody>
