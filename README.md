@@ -15,6 +15,19 @@ On the roadmap for the future are features including:
 * Alerting for high round trip times
 * Other storage backends such as time series databases rather than traditional SQLAlchemy RDBMS
 
-## Debian Installation Guide
+## Installation Guide (Debian Variants, e.g. Debian, Ubuntu, Raspbian)
 
+Works with either Python 2.7 or Python 3. This guide will install in a Python VirtualEnv to avoid clogging up your system Python installation.
+
+Install required OS packages::
+
+	apt-get install python3 python3-dev python3-setuptools
+
+Install required Python packages::
+
+	easy_install3 pip
+
+## Installation Guide (Redhat Variants, e.g. RedHat, CentOS)
+
+Works with either Python 2.7 or Python 3. This guide will install in a Python VirtualEnv to avoid clogging up your system Python installation.
 
