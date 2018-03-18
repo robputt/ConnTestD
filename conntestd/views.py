@@ -22,6 +22,7 @@ def seven_day_speed_graph():
     week_ago = now - datetime.timedelta(weeks=1)
     week_results = g.db.query(SpeedTestResult). \
         filter(SpeedTestResult.dt > week_ago). \
+        filter(SpeedTestResult.status == 'complete'). \
         order_by(asc(SpeedTestResult.dt)).all()
 
     dt_list = []
@@ -48,6 +49,7 @@ def seven_day_ping_graph():
     week_ago = now - datetime.timedelta(weeks=1)
     week_results = g.db.query(SpeedTestResult). \
         filter(SpeedTestResult.dt > week_ago). \
+        filter(SpeedTestResult.status == 'complete'). \
         order_by(asc(SpeedTestResult.dt)).all()
 
     dt_list = []
