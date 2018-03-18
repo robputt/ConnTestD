@@ -1,3 +1,4 @@
 speedtest-cli==2.0.0
 SQLAlchemy==1.1.10
 Flask==0.12.1
+Flask-APScheduler==1.8.0
