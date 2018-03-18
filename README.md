@@ -1,2 +1,4 @@
 # ConnTestD
-A simple Python daemon that allows you to periodically speed &amp; latency test your internet connection and view reporting in a web ui.
+ConnTestD is a very simple connection testing daemon / service for monitoring internet connections periodically using the speedtest.net API written in Python.
+
+A perfect use case is for monitoring your home internet connection using a Raspberry Pi.

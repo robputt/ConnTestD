@@ -4,6 +4,7 @@ from flask import g
 from flask_apscheduler import APScheduler
 from conntestd.config import SECRET_KEY
 from conntestd.config import DB_CONN
+from conntestd.config import TEST_INTERVAL
 from conntestd.db import get_db_session
 from conntestd.db import init_db
 from conntestd.speed_test import run_speedtest
@@ -16,7 +17,7 @@ class Config(object):
             'id': 'periodic_speedtest',
             'func': run_speedtest,
             'trigger': 'interval',
-            'seconds': 600
+            'seconds': TEST_INTERVAL
         }
     ]
 
