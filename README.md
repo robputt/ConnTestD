@@ -10,7 +10,7 @@ At the moment ConnTestD has a very basic feature set which includes:
 
 On the roadmap for the future are features including:
 
-* Alerting if a connection is down (obviously you'll need some way to get the message out without your internet connection, maybe a 3G dongle)
+* Alerting if a connection is down
 * Alerting if your connection falls below the minimum gauranteed speed as specified in your ISPs service level agreement
 * Alerting for high round trip times
 * Other storage backends such as time series databases rather than traditional SQLAlchemy RDBMS
@@ -69,6 +69,8 @@ Check the application has started logging to the specified log file::
 	cat /var/log/conntestd.log 
 
 Next visit your server's IP in your browser on port 5000, you should see a speed test result, a new one should get added at 10 minute intervals.
+
+![screenshot](http://url/to/img.png)
 
 ## Installation Guide (Redhat Variants, e.g. RedHat, CentOS)
 
