@@ -4,11 +4,13 @@ from conntestd.config import SECRET_KEY
 from conntestd.config import DB_CONN
 from conntestd.db import get_db_session
 from conntestd.db import init_db
+from conntestd.views import views_bp
 
 
 app = Flask(__name__)
 app.url_map.strict_slashes = False
 app.secret_key = SECRET_KEY
+app.register_blueprint(views_bp)
 
 
 @app.before_request
@@ -23,7 +25,6 @@ def post_request(resp):
     except:
         pass
     return resp
-
 
 
 if __name__ == "__main__":
