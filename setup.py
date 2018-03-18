@@ -19,6 +19,8 @@ setup(
     long_description="",
     zip_safe=False,
 
+    package_data={'templates':['*'],'static':['*'],},
+
     # Adds dependencies
     install_requires = ['flask',
                         'sqlalchemy',

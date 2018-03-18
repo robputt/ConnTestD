@@ -36,7 +36,7 @@ Create VirtualEnv for application::
 Assume the VirtualEnv and install ConnTestD::
 
 	source /opt/conntestd/bin/activate
-	pip install 
+	pip install git+https://github.com/robputt796/ConnTestD.git
 
 ## Installation Guide (Redhat Variants, e.g. RedHat, CentOS)
 
