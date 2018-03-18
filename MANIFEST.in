@@ -1,2 +1,2 @@
-include static/*
-include templates/* 
+include conntestd/static/*
+include conntestd/templates/* 
