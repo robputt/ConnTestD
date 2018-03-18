@@ -13,4 +13,8 @@ On the roadmap for the future are features including:
 * Alerting if a connection is down (obviously you'll need some way to get the message out without your internet connection, maybe a 3G dongle)
 * Alerting if your connection falls below the minimum gauranteed speed as specified in your ISPs service level agreement
 * Alerting for high round trip times
+* Other storage backends such as time series databases rather than traditional SQLAlchemy RDBMS
+
+## Debian Installation Guide
+
 
