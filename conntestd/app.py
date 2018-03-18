@@ -16,7 +16,7 @@ class Config(object):
             'id': 'periodic_speedtest',
             'func': run_speedtest,
             'trigger': 'interval',
-            'seconds': 60
+            'seconds': 600
         }
     ]
 
