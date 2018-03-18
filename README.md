@@ -29,5 +29,4 @@ Install required Python packages::
 
 ## Installation Guide (Redhat Variants, e.g. RedHat, CentOS)
 
-Works with either Python 2.7 or Python 3. This guide will install in a Python VirtualEnv to avoid clogging up your system Python installation.
-
+This needs completing, but you can probably work it out by adapting the Debian install guide, sorry!
