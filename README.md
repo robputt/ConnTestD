@@ -38,6 +38,38 @@ Assume the VirtualEnv and install ConnTestD::
 	source /opt/conntestd/bin/activate
 	pip install git+https://github.com/robputt796/ConnTestD.git
 
+Create a new SystemD service file with the contents below in the following location with your favourite editor... /lib/systemd/system/conntestd.service::
+
+	[Unit]
+	Description=ConnTestD
+	After=multi-user.target
+	StandardOutput=syslog
+	StandardError=syslog
+	SyslogIdentifier=conntestd
+	
+	[Service]
+	Type=idle
+	ExecStart=/opt/conntestd/bin/conntestd
+	
+	[Install]
+	WantedBy=multi-user.target
+
+Configure syslog to log to a specific file, open /etc/rsyslog.d/conntestd.conf in your favourite editor and configure as follows::
+
+	if $programname == 'conntestd' then /var/log/conntestd.log
+
+Reload SystemD to load the new service file, start the service and configure to run at boot time::
+
+	systemctl daemon-reload
+	systemctl start conntestd
+	systemctl enable conntestd
+
+Check the application has started logging to the specified log file::
+
+	cat /var/log/conntestd.log 
+
+Next visit your server's IP in your browser on port 5000, you should see a speed test result, a new one should get added at 10 minute intervals.
+
 ## Installation Guide (Redhat Variants, e.g. RedHat, CentOS)
 
 This needs completing, but you can probably work it out by adapting the Debian install guide, sorry!
