@@ -21,11 +21,22 @@ Works with either Python 2.7 or Python 3. This guide will install in a Python Vi
 
 Install required OS packages::
 
-	apt-get install python3 python3-dev python3-setuptools
+	apt-get update
+	apt-get install python3 python3-dev python3-setuptools git
 
 Install required Python packages::
 
 	easy_install3 pip
+	pip install virtualenv
+
+Create VirtualEnv for application::
+
+	virtualenv /opt/conntestd
+
+Assume the VirtualEnv and install ConnTestD::
+
+	source /opt/conntestd/bin/activate
+	pip install 
 
 ## Installation Guide (Redhat Variants, e.g. RedHat, CentOS)
 
