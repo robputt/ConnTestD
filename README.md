@@ -71,7 +71,3 @@ Check the application has started logging to the specified log file::
 Next visit your server's IP in your browser on port 5000, you should see a speed test result, a new one should get added at 10 minute intervals.
 
 ![screenshot](https://raw.githubusercontent.com/robputt796/ConnTestD/master/docs/screenshot.png)
-
-## Installation Guide (Redhat Variants, e.g. RedHat, CentOS)
-
-This needs completing, but you can probably work it out by adapting the Debian install guide, sorry!
